@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MAKEMYTRIP TESTING ">
+    <test name="MAKE MY TRIP TESTING OF LOGIN TEST">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.test.makemytrip.testScript.TestClass.HomePageTestCases">
+            <methods>
+                <include name="verifyPageUrlANDTittleOfPage"/>
+                <include name="verifyWebElementPresentOnHomePage"/>
+                <include name="verifyAvailableMenuUrlAndTittle"/>
+                <include name="verifyFromAndToAirportCannotBeSame"/>
+                <include name="verifySwapButtonToSwitchFromCityAndToCity"/>
+
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
