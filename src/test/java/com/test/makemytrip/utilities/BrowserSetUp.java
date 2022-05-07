@@ -8,23 +8,22 @@ import java.io.File;
 
 public class BrowserSetUp {
 
+
     private WebDriver driver;
 
     public WebDriver setupBrowser(String browser){
         ConfigLoader configLoader=ConfigLoader.getInstance();
-        String browserExe=configLoader.getPropertyValue(getOsType())+"_"+validateBrowserName(browser);
+        String browserExe=configLoader.getPropertyValue(getOsType()+"_"+validateBrowserName(browser));
         String driverExePath=System.getProperty("user.dir")+ File.separator+"Drivers"+File.separator+browserExe;
         if("chrome".equalsIgnoreCase(browser)){
             System.setProperty("webdriver.chrome.driver",driverExePath);
             this.driver=new ChromeDriver();
-            driver.manage().window().maximize();
             return driver;
         }
 
         else if("firefox".equalsIgnoreCase(browser)){
             System.setProperty("webdriver.gecko.driver",driverExePath);
             this.driver=new FirefoxDriver();
-            driver.manage().window().maximize();
             return driver;
         }
 
@@ -60,11 +59,12 @@ public class BrowserSetUp {
     private String getOsType(){
         String os=System.getProperty("os.name").toLowerCase();
 
-        if(os.equals("linux")){
+
+        if(os.contains("linux")){
             return "LINUX";
 
         }
-        else if(os.equals("window")){
+        else if(os.contains("window")){
             return "WINDOW";
         }
         else{
@@ -73,6 +73,11 @@ public class BrowserSetUp {
 
 
 
+    }
+
+    public WebDriver getDriver() {
+
+        return driver;
     }
 
 
