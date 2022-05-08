@@ -8,6 +8,21 @@ public class Constants {
     public static  final String FLIGHT_REVIEW_DETAILS_PAGE="https://www.makemytrip.com/flight/reviewDetails/?rKey";
     public static  final String FLIGHT_SEARCH_PAGE_TITTLE="MakeMyTrip";
 
+    public static  final String LOGIN_SIGNUP_TITTLE="Login/Signup";
+    public static  final String USERNAME_FIELD_PLACEHOLDER="Enter email or mobile number";
+    public static final String LOGIN_VIA_PASSWORD_TITTLE="Login With Password";
+    public static final String PASSWORD_FIELD_PLACEHOLDER="Minimum 6 characters.";
+    public static  final String USERNAME="";
+    public static final String PASSWORD="";
+    public static final String PASSWORD_LESS_THAN_MINIMUM_LENGHT="";
+    public static final String WRONG_USERNAME="";
+    public static final String WRONG_PASSWORD="";
+    public static final String LOGGED_IN_USERNAME="Hi UserName";
+    public static final String INVALID_PHONE_NUMBER_ERROR_MESSAGE="Invalid phone number";
+    public static final  String MINIMUM_LENGHT_CHARACTER_ERROR_MESSAGE="Password cannot be less than 6 characters.";
+    public static final String WRONG_PASSWORD_ERROR_MESSAGE="Looks like we are facing some technical issues, please try again in some time.";
+
+
     public static  final String FLIGHTS_MENU_OPTION_URL="https://www.makemytrip.com/flights/";
     public static  final String FLIGHTS_MENU_OPTION_TITTLE="Flight Booking, Flight Tickets Booking at Lowest Airfare | MakeMyTrip";
 
@@ -38,24 +53,6 @@ public class Constants {
    public static final String ACTIVITIES_MENU_OPTIONS_URL="https://www.makemytrip.com/activities/";
    public static final String ACTIVITIES_MENU_OPTIONS_TITTLE="MakeMyTrip - Activities, Events, Attractions and Things To Do";
 
-   public static  final String SAME_CITY_ERROR_TEXT="From & To airports cannot be the same";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static final String FROM_SECTION_TITTLE_TEXT="FROM";
     public static final String TO_SECTION_TITTLE_TEXT="TO";
     public static final String DEPARTURE_SECTION_TITTLE_TEXT="DEPARTURE";
@@ -66,20 +63,20 @@ public class Constants {
     public static  final String TO_CITY="Bengaluru";
     public static  final String FROM_CITY_CODE="GOI";
     public static  final String TO_CITY_CODE="BLR";
-    public static final String DEPARTURE_DATE="";
-    public static final String RETURN_DATE="";
+    public static  final int DEPARTURE_DAYS_FROM_NOW=2;
+    public static final  int RETURN_DAYS_FROM_NOW=3;
     public static  final int ADULTS_TRAVELLER_COUNT=2;
     public static  final int CHILDREN_TRAVELLER_COUNT=1;
     public static  final int INFANTS_TRAVELLER_COUNT=0;
     public static  final String TRAVELLER_CLASS="Premium Economy";
     public static final String TRIPTYPE_SECTION_TITTLE="TRIP TYPE";
+
     public static final String DEPARTURE_SECTION_TITTLE_ON_FLIGHT_SEARCH_PAGE="DEPART";
     public static final String PASSENGERS_AND_CLASS_TITTLE_ON_FLIGHT_SEARCH_PAGE="PASSENGERS & CLASS";
     public static final String TRIP_TYPE_ON_FLIGHT_SEARCH_PAGE="Round Trip";
     public static  final String TRAVELLERS_TEXT="Travellers";
 
-    public static  final int DEPARTURE_DAYS_FROM_NOW=2;
-    public static final  int RETURN_DAYS_FROM_NOW=3;
+    public static  final String SAME_CITY_ERROR_TEXT="From & To airports cannot be the same";
 
 
 }

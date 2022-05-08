@@ -1,5 +1,6 @@
 package com.test.makemytrip.testScript.TestClass;
 
+import com.test.makemytrip.Constants.Constants;
 import com.test.makemytrip.pageobject.HomePage;
 import com.test.makemytrip.pageobject.LoginPage;
 import com.test.makemytrip.testScript.BaseTest.BaseTest;
@@ -47,7 +48,7 @@ public class LoginTestCases extends BaseTest {
         softAssert.assertTrue(loginPage.verifyContinueButtonIsDisplayed());
         softAssert.assertTrue(loginPage.verifyLoginWithGoogleIsDisplayed());
         softAssert.assertFalse(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
-        softAssert.assertTrue(loginPage.verifyLoginSignupTittle("Login/Signup"));
+        softAssert.assertTrue(loginPage.verifyLoginSignupTittle(Constants.LOGIN_SIGNUP_TITTLE));
         softAssert.assertTrue(loginPage.verifyPersonalAccountTabIsSelected());
         softAssert.assertAll();
     }
@@ -56,27 +57,27 @@ public class LoginTestCases extends BaseTest {
     public void loginWithValidCredentials(){
         SoftAssert softAssert=getSoftAssert();
         Assert.assertTrue(loginPage.verifyPersonalAccountTabIsSelected());
-        Assert.assertTrue(loginPage.verifyLoginSignupTittle("Login/Signup"));
+        softAssert.assertTrue(loginPage.verifyLoginSignupTittle(Constants.LOGIN_SIGNUP_TITTLE));
         Assert.assertTrue(loginPage.verifyUsernameFieldIsDisplayed());
-        Assert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),"Enter email or mobile number");
-        Assert.assertFalse(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
-        loginPage.enterUsernameToLogin("9536082987");
+        softAssert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),Constants.USERNAME_FIELD_PLACEHOLDER);
+        softAssert.assertFalse(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
+        loginPage.enterUsernameToLogin(Constants.USERNAME);
         Assert.assertTrue(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
         loginPage.clickOnContinueButtonInLoginPage();
         Assert.assertTrue(loginPage.verifyLoginViaPasswordLinkIsDisplayed());
         loginPage.clickOnLoginViaPasswordLink();
-        Assert.assertTrue(loginPage.verifyBackButtonOnLoginViaPasswordPage());
-        Assert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage("Login With Password"));
+        softAssert.assertTrue(loginPage.verifyBackButtonOnLoginViaPasswordPage());
+        softAssert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage(Constants.LOGIN_VIA_PASSWORD_TITTLE));
         Assert.assertTrue(loginPage.verifyPasswordFieldIsDisplayed());
-        Assert.assertEquals(loginPage.getPasswordFieldPlaceHolderText(),"Minimum 6 characters.");
+        softAssert.assertEquals(loginPage.getPasswordFieldPlaceHolderText(),Constants.PASSWORD_FIELD_PLACEHOLDER);
         Assert.assertTrue(loginPage.verifyResetPasswordLinkIsDisplayed());
         Assert.assertTrue(loginPage.verifyLoginButtonIsDispalyed());
-        Assert.assertTrue(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
-        loginPage.enterPassword("");
-        Assert.assertFalse(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
+        softAssert.assertTrue(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
+        loginPage.enterPassword(Constants.PASSWORD);
+        softAssert.assertFalse(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
         loginPage.clickOnLoginButton();
-        Assert.assertEquals(loginPage.getLoggedInUserName(),"Hi UserName");
-//        softAssert.assertAll();
+        Assert.assertEquals(loginPage.getLoggedInUserName(),Constants.LOGGED_IN_USERNAME);
+        softAssert.assertAll();
 
     }
 
@@ -84,51 +85,51 @@ public class LoginTestCases extends BaseTest {
     public void loginWithInValidUsername(){
         SoftAssert softAssert=getSoftAssert();
         Assert.assertTrue(loginPage.verifyPersonalAccountTabIsSelected());
-        Assert.assertTrue(loginPage.verifyLoginSignupTittle("Login/Signup"));
+        softAssert.assertTrue(loginPage.verifyLoginSignupTittle(Constants.LOGIN_SIGNUP_TITTLE));
         Assert.assertTrue(loginPage.verifyUsernameFieldIsDisplayed());
-        Assert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),"Enter email or mobile number");
-        Assert.assertFalse(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
-        loginPage.enterUsernameToLogin("9536082");
+        softAssert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),Constants.USERNAME_FIELD_PLACEHOLDER);
+        softAssert.assertFalse(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
+        loginPage.enterUsernameToLogin(Constants.USERNAME);
         Assert.assertTrue(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
         loginPage.clickOnContinueButtonInLoginPage();
         Assert.assertTrue(loginPage.verifyInvalidPhoneNumberErrorMessage());
-        Assert.assertEquals(loginPage.getInvalidPhoneNumberErrorMessageText(),"Invalid phone number");
-        Assert.assertTrue(loginPage.verifyLoginSignupTittle("Login/Signup"));
-//        softAssert.assertAll();
+        Assert.assertEquals(loginPage.getInvalidPhoneNumberErrorMessageText(),Constants.INVALID_PHONE_NUMBER_ERROR_MESSAGE);
+        Assert.assertTrue(loginPage.verifyLoginSignupTittle(Constants.LOGIN_SIGNUP_TITTLE));
+       softAssert.assertAll();
     }
 
     @Test(description = "Verify Login with correct username but wrong password and also verify minimum character length for password",priority = 4)
     public void loginWithCorrectUserNameAndWrongPassword(){
         SoftAssert softAssert=getSoftAssert();
         Assert.assertTrue(loginPage.verifyPersonalAccountTabIsSelected());
-        softAssert.assertTrue(loginPage.verifyLoginSignupTittle("Login/Signup"));
+        softAssert.assertTrue(loginPage.verifyLoginSignupTittle(Constants.LOGIN_SIGNUP_TITTLE));
         softAssert.assertTrue(loginPage.verifyUsernameFieldIsDisplayed());
-        softAssert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),"Enter email or mobile number");
+        softAssert.assertEquals(loginPage.getUserNameFieldPlaceHolderText(),Constants.USERNAME_FIELD_PLACEHOLDER);
         softAssert.assertTrue(loginPage.verifyContinueButtonIsDisabledWhenUserNameIsNotEntered());
-        loginPage.enterUsernameToLogin("9536082987");
+        loginPage.enterUsernameToLogin(Constants.USERNAME);
         Assert.assertTrue(loginPage.verifyContinueButtonOnLoginPageIsEnabled());
         loginPage.clickOnContinueButtonInLoginPage();
         softAssert.assertTrue(loginPage.verifyLoginViaPasswordLinkIsDisplayed());
         loginPage.clickOnLoginViaPasswordLink();
         softAssert.assertTrue(loginPage.verifyBackButtonOnLoginViaPasswordPage());
-        softAssert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage("Login With Password"));
+        softAssert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage(Constants.LOGIN_VIA_PASSWORD_TITTLE));
         softAssert.assertTrue(loginPage.verifyPasswordFieldIsDisplayed());
-        softAssert.assertEquals(loginPage.getPasswordFieldPlaceHolderText(),"Minimum 6 characters.");
+        softAssert.assertEquals(loginPage.getPasswordFieldPlaceHolderText(),Constants.PASSWORD_FIELD_PLACEHOLDER);
         softAssert.assertTrue(loginPage.verifyResetPasswordLinkIsDisplayed());
         softAssert.assertTrue(loginPage.verifyLoginButtonIsDispalyed());
         softAssert.assertTrue(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
-        loginPage.enterPassword("Wron");
+        loginPage.enterPassword(Constants.PASSWORD_LESS_THAN_MINIMUM_LENGHT);
         softAssert.assertTrue(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
         loginPage.clickOnLoginButton();
         softAssert.assertTrue(loginPage.verifyMinimumLengthCharacterErrorMessage());
-        softAssert.assertEquals(loginPage.getMinimumLengthCharacterErrorMessageText(),"Password cannot be less than 6 characters.");
+        softAssert.assertEquals(loginPage.getMinimumLengthCharacterErrorMessageText(),Constants.MINIMUM_LENGHT_CHARACTER_ERROR_MESSAGE);
         loginPage.clearPasswordField();
-        loginPage.enterPassword("WrongPassword");
+        loginPage.enterPassword(Constants.WRONG_PASSWORD);
         Assert.assertFalse(loginPage.verifyLoginButtonIsDisableTillMinimumCharactersPasswordIsNotEntered());
         loginPage.clickOnLoginButton();
         softAssert.assertTrue(loginPage.verifyWrongPasswordErrorMessage());
-        softAssert.assertEquals(loginPage.getWrongPasswordErrorMessageText(),"Looks like we are facing some technical issues, please try again in some time.");
-        Assert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage("Login With Password"));
+        softAssert.assertEquals(loginPage.getWrongPasswordErrorMessageText(),Constants.WRONG_PASSWORD_ERROR_MESSAGE);
+        Assert.assertTrue(loginPage.verifyTitleOnLoginViaPasswordPage(Constants.LOGIN_VIA_PASSWORD_TITTLE));
         softAssert.assertAll();
 
     }
