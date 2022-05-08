@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MAKEMYTRIP TESTING " thread-count="2" parallel="tests">
+
+    <test name="MakeMYTrip website testing on Firefox">
+        <parameter name="browserName" value="firefox"/>
+        <classes>
+            <class name="com.test.makemytrip.testScript.TestClass.HomePageTestCases"></class>
+            <class name="com.test.makemytrip.testScript.TestClass.LoginTestCases"></class>
+            <class name="com.test.makemytrip.testScript.TestClass.FlightTestCases"></class>
+        </classes>
+
+    </test>
+
+    <test name="MakeMYTrip website testing on Chrome">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.test.makemytrip.testScript.TestClass.HomePageTestCases"></class>
+            <class name="com.test.makemytrip.testScript.TestClass.LoginTestCases"></class>
+            <class name="com.test.makemytrip.testScript.TestClass.FlightTestCases"></class>
+        </classes>
+    </test>
+
+</suite>
