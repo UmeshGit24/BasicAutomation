@@ -15,65 +15,65 @@ public class FlightSearchPage {
 
 
     @FindBy(xpath = "//div[@class='multiDropDownVal']")
-    public WebElement tripTypeValue;
+    private WebElement tripTypeValue;
     @FindBy(xpath = "//label[@for='tripType']")
-    public WebElement tripTypeTittle;
+    private WebElement tripTypeTittle;
 
     @FindBy(xpath = "//input[@id='fromCity']")
-    public WebElement fromCityText;
+    private WebElement fromCityText;
     @FindBy(xpath = "//span[@for='fromCity']")
     private WebElement fromCityTittle;
 
     @FindBy(xpath = "//input[@id='toCity']")
-    public WebElement toCityText;
+    private WebElement toCityText;
     @FindBy(xpath = "//span[@for='toCity']")
-    public WebElement toCityTittle;
+    private WebElement toCityTittle;
 
     @FindBy(xpath = "//input[@id='departure']")
-    public WebElement departDateValue;
+    private WebElement departDateValue;
     @FindBy(xpath = "//span[@for='departure']")
-    public WebElement departureDateTittle;
+    private WebElement departureDateTittle;
 
     @FindBy(xpath = "//input[@id='return']")
-    public WebElement retrunDateValue;
+    private WebElement retrunDateValue;
     @FindBy(xpath = "//span[@for='return']")
-    public WebElement returnDateTittle;
+    private WebElement returnDateTittle;
 
     @FindBy(xpath = "//input[@id='travellerAndClass']")
-    public WebElement passengersAndClassValue;
+    private WebElement passengersAndClassValue;
     @FindBy(xpath = "//span[@for='travellerAndClass']")
-    public WebElement passengersAndClassTitle;
+    private WebElement passengersAndClassTitle;
 
     @FindBy(xpath = "//button[@id='search-button']")
-    public WebElement searchButton;
+    private WebElement searchButton;
 
 
     @FindBy(xpath ="//button[normalize-space()='Book Now']")
-    public WebElement bookNowButton;
+    private WebElement bookNowButton;
     @FindBy(xpath = "//div[@class='splitviewStickyOuter ']")
-    public WebElement departureAndReturnflightDetailsSection;
+    private WebElement departureAndReturnflightDetailsSection;
     @FindBy(xpath = "//div[@class='splitviewStickyOuter ']/div/div[1]/div/span")
-    public WebElement departureFlightPrice;
+    private WebElement departureFlightPrice;
     @FindBy(xpath = "//div[@class='splitviewStickyOuter ']/div/div[2]/div/span")
-    public WebElement returnFlightPrice;
+    private WebElement returnFlightPrice;
     @FindBy(xpath = "//div[@class='splitviewStickyOuter ']/div/div[3]/div/div/p/span")
-    public WebElement totalFlightPrice;
+    private WebElement totalFlightPrice;
     @FindBy(xpath = "//div[@class='splitviewStickyOuter ']/div/div[3]/div/div/p[2]")
-    public WebElement fareDetails;
+    private WebElement fareDetails;
 
     @FindBy(xpath = "//div[@class='tooltip-inner']")
-    public WebElement fareSummaryTooltip;
+    private WebElement fareSummaryTooltip;
     @FindBy(xpath = "//span[contains(text(),'Total base fare')]/following-sibling::span")
-    public WebElement totalBaseFare;
+    private WebElement totalBaseFare;
     @FindBy(xpath = "//span[contains(text(),'Total Surcharges')]/following-sibling::span")
-    public WebElement totalSurCharge;
+    private WebElement totalSurCharge;
     @FindBy(xpath = "//span/font[contains(text(),'Total Amount')]/following::span/strong/font")
-    public WebElement totalAmount;
+    private WebElement totalAmount;
 
     @FindBy(xpath = "//div[@class='multifareWrap']")
-    public WebElement multifareSelectionModal;
+    private WebElement multifareSelectionModal;
     @FindBy(xpath = "//button[text()='Continue']")
-    public WebElement continueButtonOnMultiFareSelection;
+    private WebElement continueButtonOnMultiFareSelection;
 
     public boolean verifyTripTypeIsDisplayed(){
 

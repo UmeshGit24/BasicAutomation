@@ -27,112 +27,112 @@ public class HomePage {
     WebElement of Menu item on home Page
      */
     @FindBy(xpath = "//a[@data-cy='mmtLogo']")
-    public WebElement makemytripLogo;
+    private WebElement makemytripLogo;
     @FindBy(xpath ="//li[@data-cy='account']")
-    public WebElement login;
+    private WebElement login;
     @FindBy(xpath = "//li[@data-cy='myBiz']")
-    public WebElement myBizButton;
+    private WebElement myBizButton;
     @FindBy(xpath = "//li[@data-cy='myTrips']")
-    public WebElement myTripsButton;
+    private WebElement myTripsButton;
     @FindBy(xpath ="//li//a[@href='https://www.makemytrip.com/flights/']")
-    public WebElement flights;
+    private WebElement flights;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/hotels/']")
-    public WebElement hotels;
+    private WebElement hotels;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/homestays/']")
-    public WebElement homestays;
+    private WebElement homestays;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/holidays-india/']")
-    public WebElement holidaysPackages;
+    private WebElement holidaysPackages;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/railways/']")
-    public WebElement trains;
+    private WebElement trains;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/bus-tickets/']")
-    public WebElement buses;
+    private WebElement buses;
     @FindBy(xpath ="//li//a[@href='https://www.makemytrip.com/cabs/']")
-    public WebElement cabs;
+    private WebElement cabs;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/visa/']")
-    public WebElement visa;
+    private WebElement visa;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/charter-flights/']")
-    public WebElement charterFlights;
+    private WebElement charterFlights;
     @FindBy(xpath = "//li//a[@href='https://www.makemytrip.com/activities/']")
-    public  WebElement activities;
+    private  WebElement activities;
     @FindBy(xpath = "//div[contains(@class,'makeFlex column defaultCursor')]")
-    public WebElement loginPopUp;
+    private WebElement loginPopUp;
 
     @FindBy(xpath = "//li[@data-cy='oneWayTrip']")
-    public WebElement onewayTrip;
+    private WebElement onewayTrip;
     @FindBy(xpath = "//li[@data-cy='roundTrip']")
-    public WebElement roundTrip;
+    private WebElement roundTrip;
     @FindBy(xpath = "//li[@data-cy='mulitiCityTrip']")
-    public WebElement multiCityTrip;
+    private WebElement multiCityTrip;
     @FindBy(css = "ul.fswTabs.latoBlack.greyText > li")
-    public List<WebElement> genericTripType;
+    private List<WebElement> genericTripType;
 
 
 
     @FindBy(xpath = "//label[@for='fromCity']")
-    public WebElement fromCity;
+    private WebElement fromCity;
     @FindBy(xpath = "//label[@for='fromCity']/span")
-    public WebElement fromCityTittleText;
+    private WebElement fromCityTittleText;
     @FindBy(xpath ="//label[@for='fromCity']/input")
-    public WebElement fromCitySelectedName;
+    private WebElement fromCitySelectedName;
     @FindBy(xpath = "//label[@for='fromCity']/p")
-    public WebElement fromCitySelectedLocation;
+    private WebElement fromCitySelectedLocation;
 
     @FindBy(xpath = "//input[@placeholder='From']")
-    public WebElement fromCitySearchBox;
+    private WebElement fromCitySearchBox;
 
 
     @FindBy(xpath = "//label[@for='toCity']")
-    public WebElement toCity;
+    private WebElement toCity;
     @FindBy(xpath = "//label[@for='toCity']/span")
-    public WebElement toCityTittleText;
+    private WebElement toCityTittleText;
     @FindBy(xpath = "//label[@for='toCity']/input")
-    public WebElement toCitySelectedName;
+    private WebElement toCitySelectedName;
     @FindBy(xpath = "//label[@for='toCity']/p")
-    public WebElement toCitySelectedLocation;
+    private WebElement toCitySelectedLocation;
 
     @FindBy(xpath = "//input[@placeholder='To']")
-    public WebElement toCitySearchBox;
+    private WebElement toCitySearchBox;
 
     @FindBy(xpath = "//span[@class='swipCircle']")
-    public WebElement location_Swipbutton;
+    private WebElement location_Swipbutton;
 
     @FindBy(xpath="//div[@id='react-autowhatever-1']/div/ul/li/div/div[2]")
-    public List<WebElement> autosuggestList;
+    private List<WebElement> autosuggestList;
 
     @FindBy(xpath = "//label[@for='departure']")
-    public WebElement departureDateSelection;
+    private WebElement departureDateSelection;
     @FindBy(xpath = "//label[@for='departure']/span")
-    public WebElement departureDateTittle;
+    private WebElement departureDateTittle;
     @FindBy(xpath = "//label[@for='departure']/input")
-    public WebElement departureDateValue;
+    private WebElement departureDateValue;
     @FindBy(xpath = "//label[@for='return']")
-    public WebElement returnDateSelection;
+    private WebElement returnDateSelection;
     @FindBy(xpath ="//label[@for='return']/span")
-    public WebElement returnDateTittle;
+    private WebElement returnDateTittle;
     @FindBy(xpath = "//label[@for='return']/input")
-    public WebElement returnDateValue;
+    private WebElement returnDateValue;
     @FindBy(xpath = "//label[@for='travellers']")
-    public WebElement travellersAndClassSection;
+    private WebElement travellersAndClassSection;
     @FindBy(xpath = "//label[@for='travellers']/span")
-    public WebElement travellersAndClassTittle;
+    private WebElement travellersAndClassTittle;
     @FindBy(xpath = "//label[@for='travellers']/p/span/span")
-    public WebElement travellersCount;
+    private WebElement travellersCount;
     @FindBy(xpath = "//label[@for='travellers']/p/following-sibling::p")
-    public WebElement travellerClassSelected;
+    private WebElement travellerClassSelected;
 
     @FindBy(xpath = "//button[normalize-space()='APPLY']")
-    public WebElement applyButtonInTravellersSection;
+    private WebElement applyButtonInTravellersSection;
     @FindBy(xpath = "//p[@data-cy='submit']/a")
-    public WebElement searchButton;
+    private WebElement searchButton;
 
     @FindBy(xpath="//div[@class='DayPicker-Caption']/div")
-    public List<WebElement> yearMonthInCalender;
+    private List<WebElement> yearMonthInCalender;
     @FindBy(xpath ="//div[@class='DayPicker-Caption']/div")
-    public WebElement monthSelected;
+    private WebElement monthSelected;
     @FindBy(xpath ="//span[@aria-label='Next Month']")
-    public WebElement nextMonthButton;
+    private WebElement nextMonthButton;
     @FindBy(xpath = "//div[@aria-disabled='false']")
-    public List<WebElement> avialableDate;
+    private List<WebElement> avialableDate;
 
     @FindBy(xpath = "//span[@data-cy='sameCityError']")
     private WebElement sameCityError;
