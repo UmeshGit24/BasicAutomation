@@ -22,41 +22,41 @@ public class LoginPage {
     @FindBy(xpath = "//section[contains(@class,'modalMain')]")
     private WebElement loginSection;
     @FindBy(xpath = "//li[@data-cy='personalLogin']")
-    public WebElement personalAccount;
+    private WebElement personalAccount;
     @FindBy(xpath = "//li[text()='MyBiz Account']" )
-    public WebElement myBizAccount;
+    private WebElement myBizAccount;
     @FindBy(xpath = "//p[@data-cy='commonModal']/span")
-    public WebElement tittle;
+    private WebElement tittle;
     @FindBy(xpath ="//label[@for='username']")
-    public WebElement emailAndMobileHeading;
+    private WebElement emailAndMobileHeading;
     @FindBy(xpath = "//input[@id='username']")
-    public WebElement userName;
+    private WebElement userName;
     @FindBy(xpath = "//div[@data-cy='googleLogin']")
-    public WebElement loginWithGoogleButton;
+    private WebElement loginWithGoogleButton;
     @FindBy(xpath = "//p[@data-cy='error']")
-    public WebElement wrongUserNameErrorMessage;
+    private WebElement wrongUserNameErrorMessage;
     @FindBy(xpath = "//span[@data-cy='serverError']")
-    public WebElement invalidPhoneNumberErrorMessage;
+    private WebElement invalidPhoneNumberErrorMessage;
     @FindBy(xpath = "//button[@data-cy='continueBtn']")
-    public WebElement continueButton;
+    private WebElement continueButton;
     @FindBy(xpath = "//a[text()='Back']")
-    public WebElement backButton;
+    private WebElement backButton;
     @FindBy(xpath = "//div[@class='switchLoginFlow']/a")
-    public WebElement loginViaPassword;
+    private WebElement loginViaPassword;
     @FindBy(xpath = "//p[@data-cy='commonModal']/span")
-    public WebElement loginWithPasswordTittle;
+    private WebElement loginWithPasswordTittle;
     @FindBy(xpath = "//button[@data-cy='login']")
-    public WebElement loginButton;
+    private WebElement loginButton;
     @FindBy(xpath = "//input[@id='password']")
-    public WebElement passwordField;
+    private WebElement passwordField;
     @FindBy(xpath = "//span[@data-cy='serverError']")
-    public WebElement wrongPasswordErrorMessage;
+    private WebElement wrongPasswordErrorMessage;
     @FindBy(xpath = "//p[@data-cy='error']")
-    public WebElement minimumPasswordLimitErrorMsg;
+    private WebElement minimumPasswordLimitErrorMsg;
     @FindBy(xpath ="//a[@data-cy='resetPassword']")
-    public WebElement resetPasswordLink;
+    private WebElement resetPasswordLink;
     @FindBy(xpath = "//p[@data-cy='loggedInUser']")
-    public WebElement loggedInUser;
+    private WebElement loggedInUser;
 
 
     public boolean verifyloginSectionIsDisplayed(){
